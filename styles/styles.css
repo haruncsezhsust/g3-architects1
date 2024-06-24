@@ -49,7 +49,9 @@ img {
   font-size: 1.2rem;
 }
 
-/* Header Styles */
+/* ------------------------------------
+            Header Styles
+--------------------------------------- */
 
 .header-section {
   background-color: rgba(255, 144, 14, 0.1);
@@ -106,7 +108,9 @@ img {
   margin: 0 auto;
 }
 
-/* Quick List Section */
+/* ------------------------------------
+            Quick List Section
+--------------------------------------- */
 .quick-list-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -135,7 +139,9 @@ img {
   color: var(--button-color);
 }
 
-/* Features Section */
+/* ------------------------------------
+            Features Section
+--------------------------------------- */
 .features-section {
   margin-top: 100px;
 }
@@ -143,9 +149,7 @@ img {
 .features-container {
   display: flex;
   gap: 100px;
-  align-content: center;
-  justify-content: center;
-  position: relative;
+  /* position: relative; */
 }
 
 .features-articles {
@@ -164,8 +168,9 @@ img {
 .features {
   margin-top: 30px;
   display: flex;
-  gap: 30px;
+  gap: 20px;
   flex-direction: column;
+  position: relative;
 }
 .feature {
   padding: 25px;
@@ -174,18 +179,19 @@ img {
 }
 
 .feature-title {
-  font-size: 18px;
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--primary-color);
 }
 
-.features-articles .desc-texts {
+.feature .desc-texts {
   padding: 0;
   margin-top: 10px;
 
-  display: -webkit-box;
-  --webkit-line-clamp: 2;
   overflow: hidden;
+  text-overflow: ellipsis;  
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
 .features-image {
@@ -204,19 +210,22 @@ img {
   font-size: 4rem;
   font-weight: 700;
 } */
- .experience-button .action-button{
+.experience-button {
   position: absolute;
-  bottom:20px;
-  right: 50%;
-  font-weight: 400;
+  bottom: 0;
+  left: -50px;
+}
+.experience-button .action-button{
   padding: 45px;
- }
- .experience-button .action-button .new-line {
+}
+.experience-button .action-button .new-line {
   font-size: 4rem;
   font-weight: 700;
 }
 
-/* Responsive Design */
+/* -----------------------------------
+          Responsive Design
+-------------------------------------- */
 
 @media screen and (width <= 800px) {
   .navigation-bar {
@@ -235,6 +244,9 @@ img {
   .hero-title {
     font-size: 3rem;
   }
+  .new-line{
+    display: inline-block;
+  }
   .hero-title span {
     display: inline-block;
   }
@@ -252,7 +264,7 @@ img {
     grid-row: 2;
   }
 
-  /* Featurs Section */
+  /* Features Section */
   .features-container {
     flex-direction: column;
     gap: 0;
@@ -263,14 +275,16 @@ img {
   .features-image {
     max-width: 100%;
   }
-  .features-container .action-button{
-    position: absolute;
-    bottom: -20px;
-    left: -20px;
+  .experience-button .action-button {
     font-weight: 400;
     padding: 20px;
-   }
-   .features-container .action-button .new-line{
+  }
+  .experience-button {
+    bottom: 20px;
+    left :50%;
+    transform: translate(-50%);
+  }
+  .experience-button .action-button .new-line {
     font-size: 2rem;
-   }
+  }
 }
