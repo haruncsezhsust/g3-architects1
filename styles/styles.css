@@ -189,7 +189,7 @@ img {
   margin-top: 10px;
 
   overflow: hidden;
-  text-overflow: ellipsis;  
+  text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -212,15 +212,50 @@ img {
 } */
 .experience-button {
   position: absolute;
-  bottom: 0;
+  bottom: -50px;
   left: -50px;
 }
-.experience-button .action-button{
+.experience-button .action-button {
   padding: 45px;
 }
 .experience-button .action-button .new-line {
   font-size: 4rem;
   font-weight: 700;
+}
+
+/* ------------------------------
+        Some Facts styles
+--------------------------------- */
+.some-facts-section{
+  margin-top: 170px;
+}
+.some-facts-counters {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  column-gap: 80px;
+}
+
+.counter {
+  border: 1px solid var(--button-color);
+  padding: 30px 45px; 
+  text-align: center;
+  border-radius: 5px;
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+}
+.counter img {
+  width: 45px;
+  height: 45px;
+}
+.counter-number {
+  color: var(--secondary-color);
+}
+.counter-text{
+  font-size: .9rem;
+  color: var(--tertiary-color);
+  font-weight: 600;
 }
 
 /* -----------------------------------
@@ -244,7 +279,7 @@ img {
   .hero-title {
     font-size: 3rem;
   }
-  .new-line{
+  .new-line {
     display: inline-block;
   }
   .hero-title span {
@@ -281,10 +316,21 @@ img {
   }
   .experience-button {
     bottom: 20px;
-    left :50%;
+    left: 50%;
     transform: translate(-50%);
   }
   .experience-button .action-button .new-line {
     font-size: 2rem;
+  }
+
+  /* Some Facts Styles */
+  .some-facts-section{
+    margin-top: 100px;
+  }
+  .some-facts-counters {
+    margin-top: 50px;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 24px;
   }
 }
