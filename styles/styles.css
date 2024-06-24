@@ -57,7 +57,7 @@ img {
   background-color: rgba(255, 144, 14, 0.1);
 }
 .header-container,
-.main-container {
+.main-container, .footer-section {
   max-width: 1250px;
   margin: 0 auto;
   padding: 50px;
@@ -258,6 +258,44 @@ img {
   font-weight: 600;
 }
 
+/* ---------------------------------
+        Our Sponsors Styles         
+------------------------------------*/
+.our-sponsors-section{
+  margin-top: 120px;
+}
+.our-sponsors-texts{
+  text-align: center;
+}
+.sponsors-logos{
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  filter: grayscale(1);
+}
+.sponsors-logos img{
+  width: 165px;
+  height: 50px;
+}
+
+
+/* --------------------------------------
+          Footer Section
+  ---------------------------------------*/
+
+  .footer-section{
+    height: 100px;
+    text-align: center;
+    background-color: rgba(255, 144, 14, 0.1);
+    padding: 30px 0 0;
+    margin: 100px auto;
+
+  }
+
+
+
+
 /* -----------------------------------
           Responsive Design
 -------------------------------------- */
@@ -333,4 +371,20 @@ img {
     align-items: center;
     row-gap: 24px;
   }
+
+  /* Our sponsor styles */
+  .our-sponsors-section{
+    margin-top: 80px;
+  }
+  .sponsors-logos{
+    margin-top: 25px;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+  }
+  .sponsors-logos img{
+    width: 82.5px;
+    height: 25px;
+  }
+  
 }
