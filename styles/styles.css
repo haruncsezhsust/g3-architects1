@@ -57,7 +57,8 @@ img {
   background-color: rgba(255, 144, 14, 0.1);
 }
 .header-container,
-.main-container, .footer-section {
+.main-container,
+.footer-section {
   max-width: 1250px;
   margin: 0 auto;
   padding: 50px;
@@ -156,7 +157,7 @@ img {
   max-width: 50%;
 }
 
-.features-articles .section-title {
+.left-thick-border {
   padding-left: 30px;
   border-left: 5px solid var(--button-color);
 }
@@ -172,13 +173,14 @@ img {
   flex-direction: column;
   position: relative;
 }
-.feature {
+.shadow-under-box {
   padding: 25px;
   box-shadow: 0 0 10px 5px rgb(247, 247, 247);
   border-radius: 5px;
 }
 
-.feature-title {
+.feature-title,
+.client-name {
   font-size: 1.25rem;
   font-weight: 700;
   color: var(--primary-color);
@@ -226,7 +228,7 @@ img {
 /* ------------------------------
         Some Facts styles
 --------------------------------- */
-.some-facts-section{
+.some-facts-section {
   margin-top: 170px;
 }
 .some-facts-counters {
@@ -238,7 +240,7 @@ img {
 
 .counter {
   border: 1px solid var(--button-color);
-  padding: 30px 45px; 
+  padding: 30px 45px;
   text-align: center;
   border-radius: 5px;
   width: 120px;
@@ -252,49 +254,95 @@ img {
 .counter-number {
   color: var(--secondary-color);
 }
-.counter-text{
-  font-size: .9rem;
+.counter-text {
+  font-size: 0.9rem;
   color: var(--tertiary-color);
   font-weight: 600;
+}
+
+/* --------------------------
+        Testimonials Styles
+  -------------------------- */
+.testimonials-section {
+  margin-top: 100px;
+}
+
+.testimonials-texts {
+  display: flex;
+  justify-content: space-between;
+}
+.testimonials-texts .right-icon {
+  width: 200px;
+  height: 200px;
+  opacity: 0.03;
+}
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#two-cols {
+  grid-column: span 2;
+}
+#two-rows {
+  grid-row: span 2;
+}
+.testimonial {
+  display: flex;
+  column-gap: 20px;
+  /* align-items: center; */
+}
+.testimonials .feature {
+  padding: 20px;
+}
+.client-texts .desc-texts{
+  padding-bottom: 0;
+}
+.client-profession {
+  color: var(--secondary-color);
+  font-size: 0.8rem;
+}
+
+.client-image img {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
 }
 
 /* ---------------------------------
         Our Sponsors Styles         
 ------------------------------------*/
-.our-sponsors-section{
+.our-sponsors-section {
   margin-top: 120px;
 }
-.our-sponsors-texts{
+.our-sponsors-texts {
   text-align: center;
 }
-.sponsors-logos{
+.sponsors-logos {
   margin-top: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   filter: grayscale(1);
 }
-.sponsors-logos img{
+.sponsors-logos img {
   width: 165px;
   height: 50px;
 }
-
 
 /* --------------------------------------
           Footer Section
   ---------------------------------------*/
 
-  .footer-section{
-    height: 100px;
-    text-align: center;
-    background-color: rgba(255, 144, 14, 0.1);
-    padding: 30px 0 0;
-    margin: 100px auto;
-
-  }
-
-
-
+.footer-section {
+  height: 100px;
+  text-align: center;
+  background-color: rgba(255, 144, 14, 0.1);
+  padding: 30px 0 0;
+  margin: 100px auto;
+}
 
 /* -----------------------------------
           Responsive Design
@@ -318,7 +366,7 @@ img {
     font-size: 3rem;
   }
   .new-line {
-    display: inline-block;
+    display: inline;
   }
   .hero-title span {
     display: inline-block;
@@ -340,7 +388,7 @@ img {
   /* Features Section */
   .features-container {
     flex-direction: column;
-    gap: 0;
+    row-gap: 50px;
   }
   .features-articles {
     max-width: 100%;
@@ -362,7 +410,7 @@ img {
   }
 
   /* Some Facts Styles */
-  .some-facts-section{
+  .some-facts-section {
     margin-top: 100px;
   }
   .some-facts-counters {
@@ -373,18 +421,34 @@ img {
   }
 
   /* Our sponsor styles */
-  .our-sponsors-section{
+  .our-sponsors-section {
     margin-top: 80px;
   }
-  .sponsors-logos{
+  .sponsors-logos {
     margin-top: 25px;
     flex-wrap: wrap;
     gap: 16px;
     justify-content: center;
   }
-  .sponsors-logos img{
+  .sponsors-logos img {
     width: 82.5px;
     height: 25px;
   }
-  
+
+  /* Testimonials Styles */
+  .testimonials-texts .right-icon {
+    display: none;
+  }
+  .testimonials {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .testimonial {
+    max-width: 100%;
+  }
+  #two-cols {
+    grid-column: span 1;
+  }
+  #two-rows {
+    grid-row: span 1;
+  }
 }
